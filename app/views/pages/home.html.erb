@@ -1,0 +1,24 @@
+<h1>Welcome to my sample Rails app!</h1>
+
+<p>Now it's <%= Time.now %></p>
+
+<p>Members:</p>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
+
+<p>Search for someone:</p>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<hr>
+
+<%= link_to "Go to about", about_path %>
+
+<%= link_to "Go to contact", contact_path %>
